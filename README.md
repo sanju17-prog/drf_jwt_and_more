@@ -7,6 +7,11 @@ This project is a simple Student Management System built using Django and Django
 - CRUD operations for Student model
 - JWT authentication for API endpoints
 - Admin interface for managing students
+<<<<<<< HEAD
+=======
+- Throttling for anonymous and authenticated users
+- Custom throttling for specific APIs
+>>>>>>> fb9b343 (drf_throttling)
 
 ## Installation
 
@@ -63,6 +68,15 @@ The application will be available at `http://127.0.0.1:8000/`.
 
 HTTPie is a command-line HTTP client that makes it easy to interact with APIs. Below are some examples of how to use HTTPie to access the APIs in this project.
 
+<<<<<<< HEAD
+=======
+## JWT Authentication
+
+The project uses JSON Web Tokens (JWT) for authentication. Here's how it works:
+- **Access Token:** Used to authenticate requests to the API. It has a short lifespan for security reasons.
+- **Refresh Token:** Used to obtain a new access token once it expires. It has a longer lifespan.
+
+>>>>>>> fb9b343 (drf_throttling)
 ### Obtain JWT Token
 
 First, you need to obtain a JWT token by logging in with your superuser credentials.
@@ -73,7 +87,11 @@ http POST http://127.0.0.1:8000/token/ username=your-username password=your-pass
 
 You will receive a response with an access token and a refresh token.
 
+<<<<<<< HEAD
 ### Accessing Student API
+=======
+## Accessing Student API
+>>>>>>> fb9b343 (drf_throttling)
 
 Use the access token to authenticate your requests to the Student API.
 
@@ -109,12 +127,57 @@ http DELETE http://127.0.0.1:8000/student/1/ "Authorization: Bearer your-access-
 
 ## Project Structure
 
+<<<<<<< HEAD
 - `models.py`: Defines the Student model.
 - `urls.py`: Configures the URL routing for the API endpoints.
 - `views.py`: Contains the viewset for the Student model.
 - `settings.py`: Django settings for the project
 - `admin.py`: Registers the Student model with the Django admin interface.
 - `serializers.py`: Defines the serializer for the Student model.
+=======
+```bash
+project_root/
+├── db.sqlite3                       # SQLite database file.
+├── manage.py                        # Entry point for managing the Django project.
+├── README.md                        # Project documentation and instructions.
+├── requirements.txt                # List of project dependencies.
+├── jwt_and_more/
+│   ├── __pycache__/                 # Compiled Python files (cache).
+│   ├── __init__.py                  # Initialization file for the package.
+│   ├── asgi.py                      # ASGI configuration for asynchronous applications.
+│   ├── settings.py                  # Project settings and configurations.
+│   ├── urls.py                      # URL routing for the project.
+│   └── wsgi.py                      # WSGI configuration for web server integration.
+├── jwt_auth/
+│   ├── __pycache__/                 # Compiled Python files (cache).
+│   ├── migrations/                  # Database migration scripts for schema changes.
+│   ├── __init__.py                  # Initialization file for the package.
+│   ├── admin.py                     # Admin-related configurations and settings.
+│   ├── apps.py                      # Application configuration settings.
+│   ├── models.py                    # Database models for JWT authentication.
+│   ├── serializers.py               # Serializers for converting complex data types to/from JSON.
+│   ├── tests.py                     # Unit tests for the JWT authentication module.
+│   ├── urls.py                      # URL routing for JWT authentication endpoints.
+│   └── views.py                     # Views handling JWT authentication logic.
+└── drf_throttling/
+    ├── __pycache__/                 # Compiled Python files (cache).
+    ├── migrations/                  # Database migration scripts for schema changes.
+    ├── __init__.py                  # Initialization file for the package.
+    ├── admin.py                     # Admin-related configurations and settings.
+    ├── apps.py                      # Application configuration settings.
+    ├── models.py                    # Database models for throttling logic.
+    ├── tests.py                     # Unit tests for the throttling module.
+    ├── throttling.py                # Custom throttling logic implementation.
+    ├── urls.py                      # URL routing for throttling-related endpoints.
+    └── views.py                     # Views handling throttling logic.
+```
+
+## Throttling Details
+
+- **Anonymous User Throttle:** Limits the rate of requests for unauthenticated users.
+- **User Throttle:** Limits the rate of requests for authenticated users.
+- **Custom Throttle:** Custom logic to throttle specific endpoints based on business requirements.
+>>>>>>> fb9b343 (drf_throttling)
 
 ## Acknowledgements
 

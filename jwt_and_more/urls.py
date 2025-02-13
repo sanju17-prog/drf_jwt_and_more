@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jwt-auth/', include('jwt_auth.urls')),
+    path('drf-throttling/', include('drf_throttling.urls')),
 ]

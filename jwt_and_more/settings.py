@@ -44,6 +44,7 @@ EXTERNAL_APPS = [
     'rest_framework_simplejwt',
     'jwt_auth',
     'drf_throttling',
+    'django_filters',
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
@@ -133,8 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '2/day',
-        'user': '5/hour',
-        'sanjana': '1/minute'
+        'anon': '20/day',
+        'user': '50/hour',
+        'sanjana': '100/minute'
     }
 }

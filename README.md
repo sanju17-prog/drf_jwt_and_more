@@ -9,6 +9,7 @@ This project is a simple Student Management System built using Django and Django
 - Admin interface for managing students
 - Throttling for anonymous and authenticated users
 - Custom throttling for specific APIs
+- Use django-filter to filter querysets based on specified criteria.
 
 ## Installation
 

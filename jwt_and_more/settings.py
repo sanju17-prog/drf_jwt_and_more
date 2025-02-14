@@ -137,5 +137,7 @@ REST_FRAMEWORK = {
         'anon': '20/day',
         'user': '50/hour',
         'sanjana': '100/minute'
-    }
+    },
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
 }

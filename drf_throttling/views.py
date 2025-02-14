@@ -7,7 +7,7 @@ from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from .throttling import SanjanaRateThrottle
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.pagination import PageNumberPagination
+from .paginations import MyPageNumberPagination
 
 # Create your views here.
 class StudentModelViewSet(viewsets.ModelViewSet):
@@ -17,6 +17,7 @@ class StudentModelViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
     throttle_classes = [AnonRateThrottle, SanjanaRateThrottle]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    pagination_class = MyPageNumberPagination
     filterset_fields = ['name', 'roll', 'city']
     search_fields = ['name', 'roll', 'city']
     search_fields = ['^name', '^roll', '^city']

@@ -155,6 +155,7 @@ project_root/
     ├── throttling.py                # Custom throttling logic implementation.
     ├── urls.py                      # URL routing for throttling-related endpoints.
     ├── views.py                     # Views handling throttling logic.
+    ├── paginations.py               # Script to  handle pagination logic.
     └── seed.py                      # Script to seed the database with fake student data.
 ```
 
@@ -172,3 +173,4 @@ project_root/
 - **djangorestframework-simplejwt:** A JSON Web Token authentication package for Django REST Framework.
 - **HTTPie:** A command-line HTTP client that makes it easy to interact with APIs.
 - **Faker:** A library for generating fake data for testing and development.
+- **Pagination:** A library for generating pagination for large datasets.

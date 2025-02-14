@@ -10,7 +10,7 @@ This project is a simple Student Management System built using Django and Django
 - Throttling for anonymous and authenticated users
 - Custom throttling for specific APIs
 - Use django-filter to filter querysets based on specified criteria.
-- Use search-filter to get specific data
+- Use search-filter, order-filter to get specific data
 
 ## Installation
 

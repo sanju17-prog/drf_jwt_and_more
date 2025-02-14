@@ -1,16 +1,15 @@
 # Student Management System with Django and JWT Authentication
 
-This project is a simple Student Management System built using Django and Django REST Framework. It includes JWT (JSON Web Token) authentication for securing the API endpoints.
+This project is a simple Student Management System built using Django and Django REST Framework. It includes JWT (JSON Web Token) authentication for securing the API endpoints, along with features like CRUD operations, request throttling, filtering, database seeding, and pagination.
 
 ## Features
 
-- CRUD operations for Student model
-- JWT authentication for API endpoints
-- Admin interface for managing students
-- Throttling for anonymous and authenticated users
-- Custom throttling for specific APIs
-- Use django-filter to filter querysets based on specified criteria.
-- Use search-filter, order-filter to get specific data
+- **JWT Authentication:** Secure user authentication using JSON Web Tokens.
+- **CRUD Operations:** Implement Create, Read, Update, and Delete operations for managing students.
+- **Request Throttling:** Prevent abuse by limiting the rate of API requests.
+- **Filtering:** Use django-filter, search-filter, and order-filter to filter, search and order querysets based on specified criteria.
+- **Database Seeding:** Populate the database with fake data using Faker.
+- **Pagination:** Efficiently manage large datasets by implementing pagination in API responses.
 
 ## Installation
 
@@ -62,6 +61,8 @@ python manage.py runserver
 ```
 
 The application will be available at `http://127.0.0.1:8000/`.
+
+## Usage
 
 ## Accessing APIs using HTTPie
 
@@ -153,7 +154,8 @@ project_root/
     ├── tests.py                     # Unit tests for the throttling module.
     ├── throttling.py                # Custom throttling logic implementation.
     ├── urls.py                      # URL routing for throttling-related endpoints.
-    └── views.py                     # Views handling throttling logic.
+    ├── views.py                     # Views handling throttling logic.
+    └── seed.py                      # Script to seed the database with fake student data.
 ```
 
 ## Throttling Details
@@ -165,7 +167,8 @@ project_root/
 
 ## Acknowledgements
 
-- Django
-- Django REST Framework
-- djangorestframework-simplejwt
-- HTTPie
+- **Django:** A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **Django REST Framework:** A powerful and flexible toolkit for building Web APIs.
+- **djangorestframework-simplejwt:** A JSON Web Token authentication package for Django REST Framework.
+- **HTTPie:** A command-line HTTP client that makes it easy to interact with APIs.
+- **Faker:** A library for generating fake data for testing and development.

@@ -6,6 +6,7 @@ Django==5.1.6
 django-filter==24.3
 djangorestframework==3.15.2
 djangorestframework_simplejwt==5.4.0
+Faker==36.1.1
 httpie==3.2.4
 idna==3.10
 markdown-it-py==3.0.0
@@ -19,4 +20,5 @@ requests-toolbelt==1.0.0
 rich==13.9.4
 setuptools==75.8.0
 sqlparse==0.5.3
+tzdata==2025.1
 urllib3==2.3.0

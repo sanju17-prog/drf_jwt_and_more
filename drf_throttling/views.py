@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticate
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from .throttling import SanjanaRateThrottle
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter
 
 # Create your views here.
 class StudentModelViewSet(viewsets.ModelViewSet):
@@ -14,5 +15,7 @@ class StudentModelViewSet(viewsets.ModelViewSet):
     authentication_classes = [SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
     throttle_classes = [AnonRateThrottle, SanjanaRateThrottle]
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['name', 'roll', 'city']
+    search_fields = ['name', 'roll', 'city']
+    search_fields = ['^name', '^roll', '^city']
